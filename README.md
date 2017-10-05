@@ -11,3 +11,9 @@
 
 ## Link Heroku App
 [https://konekin.herokuapp.com/](https://konekin.herokuapp.com/)
+
+## Pembagian Tugas
+- Alya Putri - profile page
+- Arga Ghulam Ahmad - dashboard
+- Claudio Yosafat - add friend
+- Winayaka Ruhur Sandhya Pamungkas - update status
