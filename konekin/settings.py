@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'add_friend',
+    'dashboard',
+    'halaman_profile',
+    'update_status'
 ]
 
 MIDDLEWARE = [
