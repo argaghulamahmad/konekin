@@ -109,13 +109,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'
 
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
+
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 # Static files (CSS, JavaScript, Images)
