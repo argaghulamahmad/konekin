@@ -18,6 +18,7 @@ from django.contrib import admin
 import dashboard.urls as dashboard
 
 urlpatterns = [
+    url(r'^$', include(dashboard, namespace='dashboard')),
     url(r'^admin/', admin.site.urls),
-    url(r'^stats/', include(dashboard, namespace='lab-1')),
+    url(r'^stats/', include(dashboard, namespace='dashboard')),
 ]
