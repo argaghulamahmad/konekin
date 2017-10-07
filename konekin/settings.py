@@ -26,7 +26,7 @@ SECRET_KEY = ')m$kd@#weh7ep@x)#smshv+i)$rryu^%ib+xdv*5up7t%9r8uh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://konekin.herokuapp.com/']
+ALLOWED_HOSTS = ['http://konekin.herokuapp.com/', 'localhost']
 
 
 # Application definition
