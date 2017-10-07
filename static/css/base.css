@@ -8,16 +8,13 @@ header {
 }
 
 footer {
-    background-color: white;
-    padding-right: 1rem;
-    padding-left: 1rem;
-}
-
-footer {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    color: #2b7a78;
-    text-align: center;
+  display: block;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #2b7a78;
+  width: 100%;
 }
 
 .navbar {
