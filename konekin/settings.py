@@ -26,7 +26,7 @@ SECRET_KEY = ')m$kd@#weh7ep@x)#smshv+i)$rryu^%ib+xdv*5up7t%9r8uh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://konekin.herokuapp.com/']
 
 
 # Application definition
@@ -118,6 +118,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+DATE_INPUT_FORMATS = ('%d-%m-%Y')
 
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
