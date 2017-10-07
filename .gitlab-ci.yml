@@ -12,7 +12,7 @@ UnitTest:
         - python manage.py collectstatic --no-input
     when: on_success
     script:
-        - coverage run --include='*/*' manage.py test
+        - coverage run --include='add_friend/*','dashboard/*','halaman_profile/*','update_status/*' manage.py test
         - coverage report -m
 
 Deployment:
