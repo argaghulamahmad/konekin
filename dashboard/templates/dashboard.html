@@ -1,4 +1,39 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
 {% block content %}
-
+<div id="page-title-div">
+    <h1>Statistic</h1>
+</div>
+<figure class="profile-area" class="center">
+    <div class="profile-image">
+        <img id="img-profile" src="{% static 'img/noprofile.svg' %}" alt="no-profile-img">
+    </div>
+    <figcaption>
+    <h3 id="user-name">User Name</h3>
+    <h5 id="user-job">Occupation</h5>
+    <p id="user-description">Description</p>
+    <div class="icons">
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-linkedin"></i></a>
+        <a href=""><i class="fa fa-gitlab"></i></a>
+    </div>
+    </figcaption>
+</figure>
+<div id="stats-card-area" class="center">
+    <figure class="stats-card" >
+              <figcaption><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <h3>Friends</h3>
+                <p>120 People</p>
+              </figcaption>
+            </figure>
+    <figure class="stats-card">
+          <figcaption><i class="fa fa-rss" aria-hidden="true"></i>
+            <h3>Feeds</h3>
+            <p>23 Post</p>
+          </figcaption>
+        </figure>
+</div>
 {% endblock %}
