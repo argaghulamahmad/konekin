@@ -32,3 +32,9 @@
 	Untuk beberapa feature yang beririsan antar anggota gunakan app 'main'.
 	Contoh :
 	- 'models.py' digunakan untuk model profil yang digunakan hampir di setiap app.
+
+3. Pengaturan urls app project konekin
+    - dashboard menggunakan url(r'^stats/', ...)
+    - update_status menggunakan url(r'^update-status/', ...)
+    - halaman_profil menggunakan url(r^halaman-profil/' ...)
+    - add_friend menggunakan url(r^add-friend/' ...)
