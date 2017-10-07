@@ -5,21 +5,12 @@
 <div id="page-title-div">
     <h1>Statistic</h1>
 </div>
-<figure class="profile-area" class="center">
+<figure class="profile-area">
     <div class="profile-image">
         <img id="img-profile" src="{% static 'img/noprofile.svg' %}" alt="no-profile-img">
     </div>
     <figcaption>
     <h3 id="user-name">User Name</h3>
-    <h5 id="user-job">Occupation</h5>
-    <p id="user-description">Description</p>
-    <div class="icons">
-        <a href=""><i class="fa fa-facebook"></i></a>
-        <a href=""><i class="fa fa-twitter"></i></a>
-        <a href=""><i class="fa fa-instagram"></i></a>
-        <a href=""><i class="fa fa-linkedin"></i></a>
-        <a href=""><i class="fa fa-gitlab"></i></a>
-    </div>
     </figcaption>
 </figure>
 <div id="stats-card-area" class="center">
@@ -36,4 +27,51 @@
           </figcaption>
         </figure>
 </div>
+    <div id="post-area">
+        <h2 id="latest-post-title">Latest Post</h2>
+        <div class="post-container">
+          <div>
+              <div class="post-header">
+            <div class="post-author--no-cover">
+                <img id="img-profile-post-area" src="{% static 'img/noprofile.svg' %}" alt="no-profile-img">
+                <h3>Username</h3>
+            </div>
+          </div>
+
+          <div class="post-body">
+            <div class="post-summary">
+              <p>IP Semester ini harus CUMLAUDE!!</p>
+            </div>
+          </div>
+
+          <div class="post-footer">
+            <ul>
+              <li class="published-date">7 Oktober 2017 12:00:00</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="post-container">
+          <div>
+              <div class="post-header">
+            <div class="post-author--no-cover">
+                <img id="img-profile-post-area" src="{% static 'img/noprofile.svg' %}" alt="no-profile-img">
+                <h3>Username</h3>
+            </div>
+          </div>
+
+          <div class="post-body">
+            <div class="post-summary">
+              <p>Semangat kerjain Tugas PPW !!</p>
+            </div>
+          </div>
+
+          <div class="post-footer">
+            <ul>
+              <li class="published-date">7 Oktober 2017 12:00:00</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+    </div>
 {% endblock %}

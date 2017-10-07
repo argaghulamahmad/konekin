@@ -20,15 +20,26 @@
     align-items: center;
     justify-content: center;
 }
+
 .row {
     width: auto;
     border: 1px solid blue;
 }
 
-.center {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+#stats-card-area {
+    height: 200px;
+    text-align: center;
+    font-family: 'Lato', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 10px 0px 10px;
+    max-width: 950px;
+    color: #2B2B2B;
+    font-size: 16px;
+    max-height: 500px
 }
 
 .stats-card {
@@ -36,7 +47,7 @@
     position: relative;
     float: left;
     overflow: hidden;
-    margin: 10px 1%;
+    margin: 10px;
     min-width: 100px;
     max-width: 430px;
     max-height: 147px;
@@ -91,7 +102,7 @@
 }
 
 .profile-area {
-      text-align: center;
+    text-align: center;
     font-family: 'Lato', Arial, sans-serif;
     position: relative;
     overflow: hidden;
@@ -116,14 +127,14 @@
 }
 
 .profile-area .profile-image img {
-  max-width: 30%;
+  max-width: 40%;
   vertical-align: top;
   position: relative;
   border-radius: 50%;
 }
 
 .profile-area figcaption {
-  padding: 5% 10% 15%;
+    padding: 5% 10% 5%
 }
 
 .profile-area h3 {
@@ -142,17 +153,132 @@
   letter-spacing: 1px;
 }
 
-.profile-area .icons i {
-  color: #999;
-  display: inline-block;
-  margin-right: 5px;
-  font-size: 1.5em;
+#latest-post-title {
+    margin-left: 25%;
 }
 
-.profile-area .icons i:hover {
-  color: #555;
+@media screen and (max-width: 900px) {
+    #stats-card-area {
+        display: flex;
+    }
+
+    .stats-card figcaption {
+        padding: 10% 10% 14%;
+    }
+
+    #latest-post-title {
+        text-align: center;
+        position: relative;
+        overflow: hidden;   
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
-.profile-area .icons i a {
+
+.post-container {
+  background: #fff;
+  border-radius: 5px;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 100;
+  margin: 48px auto;
+  width: 100rem;
+}
+
+@media screen and (min-width: 480px) {
+    .post-container {
+        width: 48rem;
+    }
+}
+@media screen and (min-width: 767px) {
+    .post-container {
+        width: 48rem;
+    }
+}
+@media screen and (min-width: 959px) {
+    .post-container {
+        width: 100rem;
+    }
+}
+
+.post-container a {
+  color: #4d4dff;
   text-decoration: none;
+  transition: .25s ease;
+}
+
+.post-cover {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17779/yosemite-3.jpg");
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  height: 15rem;
+}
+.post-author,
+.post-author--no-cover {
+    padding-top: .125rem;
+    width: 80%;
+    display: inline-flex;
+    margin-left: 10%;
+}
+#img-profile-post-area {
+    border-radius: 50%;
+    display: inline-block;
+    height: 62px;
+    margin-right: 1.5rem;
+    position: static;
+    top: 8px;
+    width: 50px;
+}
+.post-author h3 {
+  color: #fff;
+  font-weight: 100;
+}
+.post-author--no-cover h3 {
+  font-weight: 100;
+}
+
+.post-body {
+  margin: 0 auto;
+  width: 80%;
+}
+.video-body {
+  height: 100%;
+  width: 100%;
+}
+.post-title h1 a {
+  color: #333;
+  font-weight: 100;
+}
+
+.post-footer {
+  margin: 0 auto;
+  padding-bottom: .125rem;
+  width: 80%;
+}
+.post-footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+.post-footer li:first-child {
+  margin-right: auto;
+}
+.post-footer li + li {
+  margin-left: .5rem;
+}
+.post-footer li {
+  font-size: .75rem;
+  height: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+}
+.published-date {
+  border-radius: 3px;
+  padding: 0 .5rem;
 }
