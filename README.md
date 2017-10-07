@@ -18,3 +18,17 @@
 - Claudio Yosafat - add friend
 - Winayaka Ruhur Sandhya Pamungkas - update status
 
+## Catatan Tambahan Antar Anggota Kelompok
+1. Penggunaan 'base.html', 'footer.html & header.html', dan navbar.
+```html
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
+{# isi content disini #}
+{% endblock %}
+```
+2. Penggunaan app main.
+	Untuk beberapa feature yang beririsan antar anggota gunakan app 'main'.
+	Contoh :
+	- 'models.py' digunakan untuk model profil yang digunakan hampir di setiap app.
