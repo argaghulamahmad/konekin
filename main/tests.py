@@ -11,8 +11,6 @@ class MainUnitTest(TestCase):
         new_user_expertise = UserExpertise.objects.create()
         new_user_expertise.expertise = "gaming programming"
 
-        # datetime_object = datetime.strptime('Jun 1 2005  1:33PM', '%b %d %Y %I:%M%p')
-
         # Creating a new user
         new_user = User.objects.create(name="Arga Ghulam Ahmad", birthday="1998-12-9", gender="M",
                                        expertise=new_user_expertise,
