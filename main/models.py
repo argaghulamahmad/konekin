@@ -37,28 +37,12 @@ class UserPost(models.Model):
 class UserExpertise(models.Model):
     expertise = models.CharField(max_length=200)
 
-    def setExpertise(self, expertise):
-        self.expertise = json.dumps(expertise)
-
-    def getExpertise(self):
-        return json.loads(self.expertise)
-
     def __str__(self):
         return str(self.expertise)
 
 class UserFriend(models.Model):
     name = models.CharField(max_length=200)
     url = models.URLField()
-
-    def setFriend(self, name, url):
-        self.name = json.dumps(name)
-        self.url = json.dumps(url)
-
-    def getName(self):
-        return json.loads(self.name)
-
-    def getUrl(self):
-        return json.load(self.url)
 
     def __str__(self):
         return str(self.name + " " + self.url)
