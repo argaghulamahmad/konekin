@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'add_friend',
     'dashboard',
     'halaman_profile',
-    'update_status'
+    'update_status',
+    'main',
 ]
 
 MIDDLEWARE = [
