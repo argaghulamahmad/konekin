@@ -120,8 +120,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-DATE_INPUT_FORMATS = ('%d-%m-%Y')
-
+DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
