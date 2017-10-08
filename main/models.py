@@ -11,6 +11,7 @@ class User(models.Model):
     birthday = models.DateField()
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     expertise = models.ManyToManyField('UserExpertise')
+    friend = models.ManyToManyField('UserFriend')
     description = models.TextField()
     email = models.EmailField(unique=True, db_index=True)
 
@@ -40,6 +41,19 @@ class UserPost(models.Model):
 
 class UserExpertise(models.Model):
     expertise = models.CharField(max_length=200)
+
+    def setExpertise(self, expertise):
+        self.expertise = json.dumps(expertise)
+
+    def getExpertise(self):
+        return json.loads(self.expertise)
+
+    def __str__(self):
+        return str(self.expertise)
+
+class UserFriend(models.Model):
+    name = models.CharField(max_length=200)
+    url = models.URLField()
 
     def setExpertise(self, expertise):
         self.expertise = json.dumps(expertise)
