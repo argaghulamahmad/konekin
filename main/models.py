@@ -21,12 +21,7 @@ class User(models.Model):
 class UserProfile(models.Model):
     user = models.ForeignKey('User')
     photo = models.ImageField('profile picture', upload_to='static/media/images/avatars/',
-                                       null=True, blank=True)
-
-    def set_avatar(self):
-        _avatar = self.avatar
-        if not _avatar:
-            self.avatar = "static/img/noprofile.svg"
+                                       null=True, blank=True, default="static/img/noprofile.svg")
 
     def __str__(self):
         return self.user.name
@@ -55,11 +50,15 @@ class UserFriend(models.Model):
     name = models.CharField(max_length=200)
     url = models.URLField()
 
-    def setExpertise(self, expertise):
-        self.expertise = json.dumps(expertise)
+    def setFriend(self, name, url):
+        self.name = json.dumps(name)
+        self.url = json.dumps(url)
 
-    def getExpertise(self):
-        return json.loads(self.expertise)
+    def getName(self):
+        return json.loads(self.name)
+
+    def getUrl(self):
+        return json.load(self.url)
 
     def __str__(self):
-        return str(self.expertise)
+        return str(self.name + " " + self.url)
