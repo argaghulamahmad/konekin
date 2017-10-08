@@ -224,11 +224,11 @@
 #img-profile-post-area {
     border-radius: 50%;
     display: inline-block;
-    height: 62px;
+    height: 60px;
     margin-right: 1.5rem;
     position: static;
     top: 8px;
-    width: 50px;
+    width: 60px;
 }
 .post-author h3 {
   color: #fff;
@@ -236,6 +236,10 @@
 }
 .post-author--no-cover h3 {
   font-weight: 100;
+}
+
+.post-summary p {
+    margin: 0 0 10px 75px;
 }
 
 .post-body {
@@ -263,7 +267,7 @@
   padding-left: 0;
 }
 .post-footer li:first-child {
-  margin-right: auto;
+  margin-right: 10px;
 }
 .post-footer li + li {
   margin-left: .5rem;
