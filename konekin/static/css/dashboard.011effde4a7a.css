@@ -238,8 +238,8 @@
   font-weight: 100;
 }
 
-.post-summary p {
-    margin: 0 0 10px 75px;
+.post-summary {
+    margin: 0 0 10px 64px;
 }
 
 .post-body {
@@ -267,7 +267,7 @@
   padding-left: 0;
 }
 .post-footer li:first-child {
-  margin-right: 10px;
+  margin-right: auto;
 }
 .post-footer li + li {
   margin-left: .5rem;
