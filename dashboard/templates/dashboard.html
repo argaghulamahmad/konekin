@@ -7,71 +7,53 @@
 </div>
 <figure class="profile-area">
     <div class="profile-image">
-        <img id="img-profile" src="{% static 'img/noprofile.svg' %}" alt="no-profile-img">
+        <img id="img-profile" src="{% static photo_path %}" alt="profile-img">
     </div>
     <figcaption>
-    <h3 id="user-name">User Name</h3>
+    <h3 id="user-name">{{ username }}</h3>
     </figcaption>
 </figure>
 <div id="stats-card-area">
     <figure class="stats-card" >
               <figcaption><i class="fa fa-address-book-o" aria-hidden="true"></i>
                 <h3>Friends</h3>
-                <p>120 People</p>
+                <p>{{ number_of_friends }} People</p>
               </figcaption>
             </figure>
     <figure class="stats-card">
           <figcaption><i class="fa fa-rss" aria-hidden="true"></i>
             <h3>Feeds</h3>
-            <p>23 Post</p>
+            <p>{{ number_of_feeds }} Post</p>
           </figcaption>
         </figure>
 </div>
     <div id="post-area">
         <h2 id="latest-post-title">Latest Post</h2>
-        <div class="post-container">
-          <div>
-              <div class="post-header">
-            <div class="post-author--no-cover">
-                <img id="img-profile-post-area" src="{% static 'img/noprofile.svg' %}" alt="no-profile-img">
-                <h3>Username</h3>
-            </div>
-          </div>
+        {% if user_post %}
+            {% for data in user_post %}
+                <div class="post-container">
+                  <div>
+                      <div class="post-header">
+                    <div class="post-author--no-cover">
+                        <img id="img-profile-post-area" src="{% static photo_path %}" alt="profile-img">
+                        <h3>{{ username }}</h3>
+                    </div>
+                  </div>
 
-          <div class="post-body">
-            <div class="post-summary">
-              <p>IP Semester ini harus CUMLAUDE!!</p>
-            </div>
-          </div>
+                  <div class="post-body">
+                    <div class="post-summary">
+                      <p>{{ data.post }}</p>
+                    </div>
+                  </div>
 
-          <div class="post-footer">
-            <ul>
-              <li class="published-date">7 Oktober 2017 12:00:00</li>
-            </ul>
-          </div>
-          </div>
+                  <div class="post-footer">
+                    <ul>
+                      <li class="published-date">{{ data.date }}</li>
+                    </ul>
+                  </div>
+                  </div>
         </div>
-        <div class="post-container">
-          <div>
-              <div class="post-header">
-            <div class="post-author--no-cover">
-                <img id="img-profile-post-area" src="{% static 'img/noprofile.svg' %}" alt="no-profile-img">
-                <h3>Username</h3>
-            </div>
-          </div>
-
-          <div class="post-body">
-            <div class="post-summary">
-              <p>Semangat kerjain Tugas PPW !!</p>
-            </div>
-          </div>
-
-          <div class="post-footer">
-            <ul>
-              <li class="published-date">7 Oktober 2017 12:00:00</li>
-            </ul>
-          </div>
-          </div>
-        </div>
+            {% endfor %}
+        {% endif %}
     </div>
 {% endblock %}
