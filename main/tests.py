@@ -12,6 +12,13 @@ class MainUnitTest(TestCase):
                                        description="a computer science student at Fasilkom UI",
                                        email="argaghulamahmad@gmail.com")
 
+        # Creating a new user friends
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1.save()
+        new_user_friend2.save()
+        new_user.friend.add(new_user_friend1, new_user_friend2)
+
         # Creating a new user expertise
         new_user_expertise1 = UserExpertise(expertise="web development")
         new_user_expertise2 = UserExpertise(expertise="mobile apps development")
@@ -28,6 +35,13 @@ class MainUnitTest(TestCase):
         new_user = User.objects.create(name="Arga Ghulam Ahmad", birthday="1998-12-9", gender="M",
                                        description="a computer science student at Fasilkom UI",
                                        email="argaghulamahmad@gmail.com")
+
+        # Creating a new user friends
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1.save()
+        new_user_friend2.save()
+        new_user.friend.add(new_user_friend1, new_user_friend2)
 
         # Creating a new user expertise
         new_user_expertise1 = UserExpertise(expertise="web development")
@@ -63,6 +77,13 @@ class MainUnitTest(TestCase):
                                        description="a computer science student at Fasilkom UI",
                                        email="argaghulamahmad@gmail.com")
 
+        # Creating a new user friends
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1.save()
+        new_user_friend2.save()
+        new_user.friend.add(new_user_friend1, new_user_friend2)
+
         # Creating a new user expertise
         new_user_expertise1 = UserExpertise(expertise="web development")
         new_user_expertise2 = UserExpertise(expertise="mobile apps development")
@@ -80,3 +101,14 @@ class MainUnitTest(TestCase):
         # Retrieving all user profile
         counting_all_user_profile = UserProfile.objects.all().count()
         self.assertEqual(counting_all_user_profile, 1)
+
+    def test_model_can_create_new_user_friend(self):
+        # Creating a new user friends
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1.save()
+        new_user_friend2.save()
+
+        # Retrieving all user friends
+        counting_all_user_friends = UserFriend.objects.all().count()
+        self.assertEqual(counting_all_user_friends, 2)
