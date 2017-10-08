@@ -38,3 +38,7 @@
     - update_status menggunakan url(r'^update-status/', ...)
     - halaman_profil menggunakan url(r^halaman-profil/' ...)
     - add_friend menggunakan url(r^add-friend/' ...)
+
+4. Username dan password admin konekin
+    Buka 'http://konekin.herokuapp.com/admin' atau 'localhost:8000/admin'.
+    Masukkan username : 'adminkonekin' dan password : 'adminpass'.
