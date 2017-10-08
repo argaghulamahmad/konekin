@@ -7,30 +7,34 @@ datetime.utcnow().replace(tzinfo=pytz.utc)
 
 class MainUnitTest(TestCase):
     def test_model_can_create_new_user(self):
-        # Creating a new user expertise
-        new_user_expertise = UserExpertise.objects.create()
-        new_user_expertise.expertise = "gaming programming"
-
         # Creating a new user
         new_user = User.objects.create(name="Arga Ghulam Ahmad", birthday="1998-12-9", gender="M",
-                                       expertise=new_user_expertise,
                                        description="a computer science student at Fasilkom UI",
                                        email="argaghulamahmad@gmail.com")
+
+        # Creating a new user expertise
+        new_user_expertise1 = UserExpertise(expertise="web development")
+        new_user_expertise2 = UserExpertise(expertise="mobile apps development")
+        new_user_expertise1.save()
+        new_user_expertise2.save()
+        new_user.expertise.add(new_user_expertise1, new_user_expertise2)
 
         # Retrieving all user
         counting_all_user = User.objects.all().count()
         self.assertEqual(counting_all_user, 1)
 
     def test_model_can_create_new_user_post(self):
-        # Creating a new user expertise
-        new_user_expertise = UserExpertise.objects.create()
-        new_user_expertise.expertise = "gaming programming"
-
         # Creating a new user
         new_user = User.objects.create(name="Arga Ghulam Ahmad", birthday="1998-12-9", gender="M",
-                                       expertise=new_user_expertise,
                                        description="a computer science student at Fasilkom UI",
                                        email="argaghulamahmad@gmail.com")
+
+        # Creating a new user expertise
+        new_user_expertise1 = UserExpertise(expertise="web development")
+        new_user_expertise2 = UserExpertise(expertise="mobile apps development")
+        new_user_expertise1.save()
+        new_user_expertise2.save()
+        new_user.expertise.add(new_user_expertise1, new_user_expertise2)
 
         post_text = "Hai Semua! Belajar PPW Yuk :)"
 
@@ -44,23 +48,27 @@ class MainUnitTest(TestCase):
 
     def test_model_can_create_new_user_expertise(self):
         # Creating a new user expertise
-        new_user_expertise = UserExpertise.objects.create()
-        new_user_expertise.expertise = "gaming programming"
+        new_user_expertise1 = UserExpertise(expertise="web development")
+        new_user_expertise2 = UserExpertise(expertise="mobile apps development")
+        new_user_expertise1.save()
+        new_user_expertise2.save()
 
         # Retrieving all user expertise
         counting_all_user_expertise = UserExpertise.objects.all().count()
-        self.assertEqual(counting_all_user_expertise, 1)
+        self.assertEqual(counting_all_user_expertise, 2)
 
     def test_model_can_create_new_user_profile(self):
-        # Creating a new user expertise
-        new_user_expertise = UserExpertise.objects.create()
-        new_user_expertise.expertise = "gaming programming"
-
         # Creating a new user
         new_user = User.objects.create(name="Arga Ghulam Ahmad", birthday="1998-12-9", gender="M",
-                                       expertise=new_user_expertise,
                                        description="a computer science student at Fasilkom UI",
                                        email="argaghulamahmad@gmail.com")
+
+        # Creating a new user expertise
+        new_user_expertise1 = UserExpertise(expertise="web development")
+        new_user_expertise2 = UserExpertise(expertise="mobile apps development")
+        new_user_expertise1.save()
+        new_user_expertise2.save()
+        new_user.expertise.add(new_user_expertise1, new_user_expertise2)
 
         # Creating a new user profile
         new_user_profile = UserProfile.objects.create(user=new_user)
