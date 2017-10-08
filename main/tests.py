@@ -32,14 +32,13 @@ class MainUnitTest(TestCase):
                                        description="a computer science student at Fasilkom UI",
                                        email="argaghulamahmad@gmail.com")
 
-        # Creating a new post
         post_text = "Hai Semua! Belajar PPW Yuk :)"
 
         # Creating a new post
         new_post = UserPost.objects.create(user=new_user, post=post_text, date="2017-10-6 06:00:00+0800")
 
 
-        # Retrieving all available activity
+        # Retrieving all userpost
         counting_all_user_post = UserPost.objects.all().count()
         self.assertEqual(counting_all_user_post, 1)
 
@@ -48,7 +47,7 @@ class MainUnitTest(TestCase):
         new_user_expertise = UserExpertise.objects.create()
         new_user_expertise.expertise = "gaming programming"
 
-        # Retrieving all available activity
+        # Retrieving all user expertise
         counting_all_user_expertise = UserExpertise.objects.all().count()
         self.assertEqual(counting_all_user_expertise, 1)
 
