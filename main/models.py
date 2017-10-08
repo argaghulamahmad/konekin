@@ -10,7 +10,7 @@ class User(models.Model):
     name = models.CharField(max_length=27)
     birthday = models.DateField()
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    expertise = models.ForeignKey('UserExpertise')
+    expertise = models.ManyToManyField('UserExpertise')
     description = models.TextField()
     email = models.EmailField(unique=True, db_index=True)
 
