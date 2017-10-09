@@ -1,8 +1,8 @@
 from django.test import TestCase, Client
 from django.urls import resolve
 
-from dashboard.views import count_user_post, index, username, number_of_friends, number_of_feeds, photo_path, \
-    reversed_post, response
+from dashboard.views import count_user_post, index, username, number_of_friends, number_of_feeds, reversed_post, \
+    original_photo_path
 from main.models import User, UserPost, UserExpertise, UserFriend
 
 
@@ -41,35 +41,16 @@ class DashboardUnitTest(TestCase):
         post_text = "Hai Semua! Belajar PPW Yuk :)"
 
         # Creating a new post
-        new_post = UserPost.objects.create(user=new_user, post=post_text, date="2017-10-6 06:00:00+0800")
+        new_post = UserPost.objects.create(user=new_user, post=post_text, date="2017-10-6 06:00:00+0700")
 
         total_post = count_user_post()
         self.assertEqual(total_post, 3)
 
-    # def test_response_username(self):
-    #     response = Client().get('/stats')
-    #     self.assertEqual(username, response['username'])
-    #
-    # def test_response_user_of_friends(self):
-    #     response = Client().get('/stats')
-    #     self.assertEqual(number_of_friends, response['number_of_friends'])
-    #
-    # def test_response_user_of_feeds(self):
-    #     response = Client().get('/stats')
-    #     self.assertEqual(number_of_feeds, response['number_of_feeds'])
-    #
-    # def test_response_photo_path(self):
-    #     response = Client().get('/stats')
-    #     self.assertEqual(photo_path, response['photo_path'])
-    #
-    # def test_response_user_post(self):
-    #     response = Client().get('/stats')
-    #     self.assertEqual(reversed_post, response['user_post'])
-
-    # def test_dashboard_information(self):
-    #     response = Client().get('/stats')
-    #     self.assertEqual(response['username'], username)
-    #     self.assertEqual(response['number_of_friends'], number_of_friends)
-    #     self.assertEqual(response['number_of_feeds'], number_of_feeds)
-    #     self.assertEqual(response['photo_path'], photo_path)
-    #     self.assertEqual(response['user_post'], reversed_post)
+    def test_dashboard_information(self):
+        response = Client().get('/stats/')
+        html_response = response.content.decode('utf8')
+        photo_path = original_photo_path[:27]
+        self.assertIn(username, html_response)
+        self.assertIn(str(number_of_friends), html_response)
+        self.assertIn(str(number_of_feeds), html_response)
+        self.assertIn(photo_path, html_response)
