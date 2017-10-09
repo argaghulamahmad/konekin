@@ -60,7 +60,6 @@ class DashboardUnitTest(TestCase):
         self.assertIn(str(number_of_feeds), html_response)
         self.assertIn(photo_path, html_response)
 
-@unittest.skip("skip functional test")
 class DashboardFunctionalTest(TestCase):
     def setUp(self):
         chrome_options = Options()
@@ -75,12 +74,12 @@ class DashboardFunctionalTest(TestCase):
         self.selenium.quit()
         super(DashboardFunctionalTest, self).tearDown()
 
-    def test_dashboard(self):
+    def test_postarea_stastcardarea_dashboard(self):
         selenium = self.selenium
 
         # Opening the link we want to test
         selenium.get('http://127.0.0.1:8000/stats/')
 
         # find the form element
-        selenium.find_element_by_id('post-area')
-        selenium.find_element_by_id('stats-card-area')
+        post_area = selenium.find_element_by_id('post-area')
+        stats_card_area = selenium.find_element_by_id('stats-card-area')
