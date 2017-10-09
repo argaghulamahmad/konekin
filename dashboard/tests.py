@@ -1,14 +1,16 @@
 from django.test import TestCase, Client
 from django.urls import resolve
-from .views import index
-from main.models import *
-from dashboard.views import count_user_post
+
+from dashboard.views import count_user_post, index, username, number_of_friends, number_of_feeds, photo_path, \
+    reversed_post, response
+from main.models import User, UserPost, UserExpertise, UserFriend
+
 
 class DashboardUnitTest(TestCase):
     # test apakah url dashboard sudah ada
     def test_dashboard_url_is_exist(self):
-        response = Client().get('/stats/')
-        self.assertEqual(response.status_code, 200)
+        response = Client().get('/stats')
+        self.assertEqual(response.status_code, 301)
 
     # test apakah dashboard menggunakan funcsi index() pada views dashboard
     def test_dashboard_using_index_func(self):
@@ -42,4 +44,32 @@ class DashboardUnitTest(TestCase):
         new_post = UserPost.objects.create(user=new_user, post=post_text, date="2017-10-6 06:00:00+0800")
 
         total_post = count_user_post()
-        self.assertEqual(total_post, 1)
+        self.assertEqual(total_post, 3)
+
+    # def test_response_username(self):
+    #     response = Client().get('/stats')
+    #     self.assertEqual(username, response['username'])
+    #
+    # def test_response_user_of_friends(self):
+    #     response = Client().get('/stats')
+    #     self.assertEqual(number_of_friends, response['number_of_friends'])
+    #
+    # def test_response_user_of_feeds(self):
+    #     response = Client().get('/stats')
+    #     self.assertEqual(number_of_feeds, response['number_of_feeds'])
+    #
+    # def test_response_photo_path(self):
+    #     response = Client().get('/stats')
+    #     self.assertEqual(photo_path, response['photo_path'])
+    #
+    # def test_response_user_post(self):
+    #     response = Client().get('/stats')
+    #     self.assertEqual(reversed_post, response['user_post'])
+
+    # def test_dashboard_information(self):
+    #     response = Client().get('/stats')
+    #     self.assertEqual(response['username'], username)
+    #     self.assertEqual(response['number_of_friends'], number_of_friends)
+    #     self.assertEqual(response['number_of_feeds'], number_of_feeds)
+    #     self.assertEqual(response['photo_path'], photo_path)
+    #     self.assertEqual(response['user_post'], reversed_post)
