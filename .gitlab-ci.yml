@@ -47,6 +47,6 @@ FunctionalTest:
         - python manage.py runserver 8000 &
     when: on_success
     script:
-        - python manage.py test
+        - python manage.py test dashboard.tests.DashboardFunctionalTest
     except:
         - master
