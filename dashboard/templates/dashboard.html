@@ -2,31 +2,32 @@
 {% load staticfiles %}
 {% load static %}
 {% block content %}
-<div id="page-title-div">
-    <h1>Statistic</h1>
-</div>
-<figure class="profile-area">
-    <div class="profile-image">
-        <img id="img-profile" src="{% static photo_path %}" alt="profile-img">
+<div class="container">
+    <div id="page-title-div">
+        <h1>Statistic</h1>
     </div>
-    <figcaption>
-    <h3 id="user-name">{{ username }}</h3>
-    </figcaption>
-</figure>
-<div id="stats-card-area">
-    <figure class="stats-card" >
-              <figcaption><i class="fa fa-address-book-o" aria-hidden="true"></i>
-                <h3>Friends</h3>
-                <p>{{ number_of_friends }} People</p>
+    <figure class="profile-area">
+        <div class="profile-image">
+            <img id="img-profile" src="{% static photo_path %}" alt="profile-img">
+        </div>
+        <figcaption>
+        <h3 id="user-name">{{ username }}</h3>
+        </figcaption>
+    </figure>
+    <div id="stats-card-area">
+        <figure class="stats-card" >
+                  <figcaption><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                    <h3>Friends</h3>
+                    <p>{{ number_of_friends }} People</p>
+                  </figcaption>
+                </figure>
+        <figure class="stats-card">
+              <figcaption><i class="fa fa-rss" aria-hidden="true"></i>
+                <h3>Feeds</h3>
+                <p>{{ number_of_feeds }} Post</p>
               </figcaption>
             </figure>
-    <figure class="stats-card">
-          <figcaption><i class="fa fa-rss" aria-hidden="true"></i>
-            <h3>Feeds</h3>
-            <p>{{ number_of_feeds }} Post</p>
-          </figcaption>
-        </figure>
-</div>
+    </div>
     <div id="post-area">
         <h2 id="latest-post-title">Latest Post</h2>
         {% if user_post %}
@@ -56,4 +57,5 @@
             {% endfor %}
         {% endif %}
     </div>
+</div>
 {% endblock %}

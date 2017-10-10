@@ -179,12 +179,12 @@
 
 @media screen and (min-width: 480px) {
     .post-container {
-        width: 27rem;
+        width: 48rem;
     }
 }
 @media screen and (min-width: 767px) {
     .post-container {
-        width: 27rem;
+        width: 48rem;
     }
 }
 @media screen and (min-width: 959px) {
@@ -276,4 +276,15 @@
 .published-date {
   border-radius: 3px;
   padding: 0 .5rem;
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  .post-container {
+    background: #fff;
+    border-radius: 5px;
+    font-family: "adelle-sans", sans-serif;
+    font-weight: 100;
+    margin: 48px auto;
+    width: 27rem;
+  }
 }
