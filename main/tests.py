@@ -208,17 +208,3 @@ class MainUnitTest(TestCase):
         new_post = UserPost.objects.create(user=new_user, post=post_text, date=test_date_time)
 
         self.assertEqual(new_post.__str__(), test_name + " " + test_date_time)
-
-
-    # def test_str_function_user_friend(self):
-    #     test_name = "Arga Ghulam Ahmad"
-    #     test_url = "https://ppw-lab-arga.herokuapp.com/"
-
-    #     # Creating a new user friends
-    #     new_user_friend = UserFriend(name=test_name, url=test_url)
-    #     new_user_friend.save()
-    #     date = new_user_friend.date
-    #     print(new_user_friend.__str__())
-    #     print(test_name + " " + test_url + " Added since " + date)
-    #     self.assertEqual(new_user_friend.__str__(), test_name + " " + test_url + " Added since " + date)
-    #     # self.name + " " + self.url + " Added since " + self.date
