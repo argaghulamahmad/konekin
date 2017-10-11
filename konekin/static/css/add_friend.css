@@ -1,19 +1,53 @@
-body {
+body{
     min-height: 2000px;
+    background-color : #DEF2F1;
   }
   
   .navbar-static-top {
     margin-bottom: 19px;
   }
-  /*Textarea not resizeable*/
-  textarea {
-      resize:none
-  }
 
   #add-friend-title{
-    color : red;
+    color : black;
+  }
+  #form_friend{
+    width: 100%;
   }
 
-  .form-control{
-    width : 50px ;
+  .btn-default{
+    float: right;
+    background-color : #3AAFA9;
+    color : #FFFFFF;
   }
+
+ .form-control{
+    padding: 9px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    background: #FFFFFF left top repeat-x; 
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+ }
+
+ #form_friend :hover{
+   border-color : #C9C9C9;
+   box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+   -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+   -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+ }
+
+ #form_friend :focus{
+  border-color : #C9C9C9;
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+ }
+
+ table{
+   border-collapse :collapse;
+ }
+
+ 
