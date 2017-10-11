@@ -30,3 +30,4 @@ def index(request):
     response['user_post'] = reversed_post
     response['title'] = "Konekin - Stats"
     return render(request, 'dashboard.html', response)
+    
