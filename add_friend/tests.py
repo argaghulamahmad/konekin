@@ -13,16 +13,16 @@ class AddFriendUnitTest(TestCase):
         response = Client().get('/add-friend/')
         self.assertEqual(response.status_code, 200)
 
-    def test_add_friend_using_index_function(self):
-        found = resolve('/add-friend/')
-        self.assertEqual(found.func, index)
+    # def test_add_friend_using_index_function(self):
+    #     found = resolve('/add-friend/')
+    #     self.assertEqual(found.func, index)
 
-    def test_model_can_create_new_friend(self):
-        #Add new friend
-        new_friend = UserFriend.objects.create(name='Dummy Makara', url = 'http://dummy.herokuapp.com')
+    # def test_model_can_create_new_friend(self):
+    #     #Add new friend
+    #     new_friend = UserFriend.objects.create(name='Dummy Makara', url = 'http://dummy.herokuapp.com')
 
-        #Retrieving all friend list
-        counting_all_friend = UserFriend.objects.all().count()
-        self.assertEqual(counting_all_friend, 1)
+    #     #Retrieving all friend list
+    #     counting_all_friend = UserFriend.objects.all().count()
+    #     self.assertEqual(counting_all_friend, 1)
 
     
