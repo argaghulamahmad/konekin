@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load static %}
+<<<<<<< HEAD
 {% static 'css/add_friends.css' %}
 {% block content %} 
 <div id="page-title-div">
@@ -9,25 +10,35 @@
 <figure class="profile-area">
     <div class="profile-image">
         <img id="img-profile" src="{% static photo_path %}" alt="profile-img">
+=======
+{% block content %}
+<div class="container">
+    <div id="page-title-div">
+        <h1>Statistic</h1>
+>>>>>>> d94e6b2292c55f6918022d2566bf91ca87083a11
     </div>
-    <figcaption>
-    <h3 id="user-name">{{ username }}</h3>
-    </figcaption>
-</figure>
-<div id="stats-card-area">
-    <figure class="stats-card" >
-              <figcaption><i class="fa fa-address-book-o" aria-hidden="true"></i>
-                <h3>Friends</h3>
-                <p>{{ number_of_friends }} People</p>
+    <figure class="profile-area">
+        <div class="profile-image">
+            <img id="img-profile" src="{% static photo_path %}" alt="profile-img">
+        </div>
+        <figcaption>
+        <h3 id="user-name">{{ username }}</h3>
+        </figcaption>
+    </figure>
+    <div id="stats-card-area">
+        <figure class="stats-card" >
+                  <figcaption><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                    <h3>Friends</h3>
+                    <p>{{ number_of_friends }} People</p>
+                  </figcaption>
+                </figure>
+        <figure class="stats-card">
+              <figcaption><i class="fa fa-rss" aria-hidden="true"></i>
+                <h3>Feeds</h3>
+                <p>{{ number_of_feeds }} Post</p>
               </figcaption>
             </figure>
-    <figure class="stats-card">
-          <figcaption><i class="fa fa-rss" aria-hidden="true"></i>
-            <h3>Feeds</h3>
-            <p>{{ number_of_feeds }} Post</p>
-          </figcaption>
-        </figure>
-</div>
+    </div>
     <div id="post-area">
         <h2 id="latest-post-title">Latest Post</h2>
         {% if user_post %}
@@ -53,8 +64,9 @@
                     </ul>
                   </div>
                   </div>
-        </div>
+                </div>
             {% endfor %}
         {% endif %}
     </div>
+</div>
 {% endblock %}

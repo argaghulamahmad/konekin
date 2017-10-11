@@ -144,6 +144,14 @@
   margin: 3px 0;
 }
 
+.profile-area h5 {
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 1px;
+}
+
 #latest-post-title {
     margin-left: 25%;
 }
@@ -179,12 +187,12 @@
 
 @media screen and (min-width: 480px) {
     .post-container {
-        width: 27rem;
+        width: 48rem;
     }
 }
 @media screen and (min-width: 767px) {
     .post-container {
-        width: 27rem;
+        width: 48rem;
     }
 }
 @media screen and (min-width: 959px) {

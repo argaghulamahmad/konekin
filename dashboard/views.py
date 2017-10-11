@@ -20,7 +20,7 @@ username = user.name
 number_of_friends = user.friend.count()
 number_of_feeds = count_user_post()
 photo_path = original_photo_path[7:]
-reversed_post = reversed(post_set)
+reversed_post = list(reversed(post_set))
 
 def index(request):
     response['username'] = username

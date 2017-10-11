@@ -181,10 +181,17 @@
     .post-container {
         width: 27rem;
     }
+
+    h3 {
+        margin-top: -11px;
+    }
+    #page-title-div {
+        text-align: center;
+    }
 }
 @media screen and (min-width: 767px) {
     .post-container {
-        width: 27rem;
+        width: 48rem;
     }
 }
 @media screen and (min-width: 959px) {
