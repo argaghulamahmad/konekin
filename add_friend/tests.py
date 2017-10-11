@@ -37,12 +37,12 @@ class AddFriendUnitTest(TestCase):
         self.assertIn(name,html_response)
         self.assertIn(url,html_response)
 
-    # def test_add_friend_showing_all_friend(self):
-    #     name_dummy = 'Dummy'
-    #     url_dummy = 'http://dummy.herokuapp.com'
-    #     friend_dummy = {'name' : name_dummy, 'url' : url_dummy}
-    #     add_new_friend_dummy = Client().post('/add-friend/add_new_friend/',friend_dummy)
-    #     self.assertEqual(add_new_friend_dummy.status_code, 302)
+    def test_add_friend_showing_all_friend(self):
+        name_dummy = 'Dummy'
+        url_dummy = 'http://dummy.herokuapp.com'
+        friend_dummy = {'name' : name_dummy, 'url' : url_dummy}
+        add_new_friend_dummy = Client().post('/add-friend/add_new_friend/',friend_dummy)
+        self.assertEqual(add_new_friend_dummy.status_code, 302)
 
     #     name_dio = 'Dio'
     #     url_dio = 'http://dio.herokuapp.com'
