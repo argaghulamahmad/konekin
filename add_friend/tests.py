@@ -21,11 +21,11 @@ class AddFriendUnitTest(TestCase):
         found = resolve('/add-friend/add_new_friend/')
         self.assertEqual(found.func, add_new_friend)
 
-    # def test_model_can_create_new_friend(self):
-    #     new_friend = UserFriend.objects.create(name='Dummy Makara', url = 'http://dummy.herokuapp.com')
+    def test_model_can_create_new_friend(self):
+        new_friend = UserFriend.objects.create(name='Dummy Makara', url = 'http://dummy.herokuapp.com')
 
-    #     counting_all_friend = UserFriend.objects.all().count()
-    #     self.assertEqual(counting_all_friend, 1)
+        counting_all_friend = UserFriend.objects.all().count()
+        self.assertEqual(counting_all_friend, 1)
 
     # def test_add_new_friend_success_and_render_the_result(self):
     #     name = 'Dummy'
