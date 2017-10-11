@@ -27,15 +27,15 @@ class AddFriendUnitTest(TestCase):
         counting_all_friend = UserFriend.objects.all().count()
         self.assertEqual(counting_all_friend, 1)
 
-    # def test_add_new_friend_success_and_render_the_result(self):
-    #     name = 'Dummy'
-    #     url = 'http://dummy.herokuapp.com'
-    #     response = Client().post('/add-friend/add_new_friend/', {'name': name, 'url': url})
-    #     self.assertEqual(response.status_code, 302)
-    #     response = Client().get('/add-friend/')
-    #     html_response = response.content.decode('utf8')
-    #     self.assertIn(name,html_response)
-    #     self.assertIn(url,html_response)
+    def test_add_new_friend_success_and_render_the_result(self):
+        name = 'Dummy'
+        url = 'http://dummy.herokuapp.com'
+        response = Client().post('/add-friend/add_new_friend/', {'name': name, 'url': url})
+        self.assertEqual(response.status_code, 302)
+        response = Client().get('/add-friend/')
+        html_response = response.content.decode('utf8')
+        self.assertIn(name,html_response)
+        self.assertIn(url,html_response)
 
     # def test_add_friend_showing_all_friend(self):
     #     name_dummy = 'Dummy'
