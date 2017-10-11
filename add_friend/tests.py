@@ -44,24 +44,24 @@ class AddFriendUnitTest(TestCase):
         add_new_friend_dummy = Client().post('/add-friend/add_new_friend/',friend_dummy)
         self.assertEqual(add_new_friend_dummy.status_code, 302)
 
-    #     name_dio = 'Dio'
-    #     url_dio = 'http://dio.herokuapp.com'
-    #     friend_dio = {'name' :  name_dio, 'url' : url_dio}
-    #     add_new_friend_dio = Client().post('/add-friend/add_new_friend/',friend_dio)
-    #     self.assertEqual(add_new_friend_dio.status_code, 302)
+        name_dio = 'Dio'
+        url_dio = 'http://dio.herokuapp.com'
+        friend_dio = {'name' :  name_dio, 'url' : url_dio}
+        add_new_friend_dio = Client().post('/add-friend/add_new_friend/',friend_dio)
+        self.assertEqual(add_new_friend_dio.status_code, 302)
 
-    #     response = Client().get('/add-friend/')
-    #     html_response = response.content.decode('utf8')
+        response = Client().get('/add-friend/')
+        html_response = response.content.decode('utf8')
 
-    #     self.assertIn(name_dummy,html_response)
-    #     self.assertIn(url_dummy, html_response)
-    #     self.assertIn(name_dio, html_response)
-    #     self.assertIn(url_dio, html_response)
+        self.assertIn(name_dummy,html_response)
+        self.assertIn(url_dummy, html_response)
+        self.assertIn(name_dio, html_response)
+        self.assertIn(url_dio, html_response)
 
 
-    # def test_add_new_friend_fail(self):
-    #     response = Client().post('/add-friend/add_new_friend/',{'name' : 'Dummy', 'url' : 'www.dummy.com'})
-    #     self.assertEqual(response.status_code, 302)
+    def test_add_new_friend_fail(self):
+        response = Client().post('/add-friend/add_new_friend/',{'name' : 'Dummy', 'url' : 'www.dummy.com'})
+        self.assertEqual(response.status_code, 302)
 
     # def test_add_friend_form_validation_for_blank_items(self):
     #     form = Add_Friend_Form(data={'name': '', 'url': ''})
