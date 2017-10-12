@@ -1,5 +1,5 @@
 from django.db import models
-import datetime
+
 GENDER_CHOICES = (
         ('M', 'Male'),
         ('F', 'Female'),
