@@ -1,26 +1,22 @@
-from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-from main.models import *
-from main.views import id_user_main
-from .forms import Status_Form
-from django.shortcuts import render
-from dashboard.views import *
-from django.shortcuts import get_object_or_404
 import datetime
+
+from django.http import HttpResponseRedirect
+
+from dashboard.views import *
+from .forms import Status_Form
+
 # Create your views here.
 
 
 response={}
 new_user = User.objects.get(id=id_user_main)
 now = datetime.datetime.now()
-#post_set = UserPost.objects.filter(user_id=id_user_main)
-postingan =UserPost.objects.all().values()
 
 def index(request):
     post_set = UserPost.objects.filter(user_id=id_user_main)
     reversed_post = list(post_set)
-    response['username'] = username
-    response['photo_path'] = photo_path
+    response['username'] = User.objects.first().name
+    response['photo_path'] = UserProfile.objects.first().photo.url[7:]
     response['user_post'] = post_set
     response['title'] = "Konekin - Update Status"
     response['upstatus_form'] = Status_Form
