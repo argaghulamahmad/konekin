@@ -17,9 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import RedirectView
 import dashboard.urls as dashboard
+import add_friend.urls as add_friend
 
 urlpatterns = [
     url(r'^$', RedirectView.as_view(permanent=True, url='/update-status/'), name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^stats/', include(dashboard, namespace='dashboard')),
+    url(r'^add-friend/',include(add_friend, namespace ='add-friend')),
 ]

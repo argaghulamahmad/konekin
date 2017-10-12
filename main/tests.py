@@ -13,8 +13,8 @@ class MainUnitTest(TestCase):
                                        email="argaghulamahmad@gmail.com")
 
         # Creating a new user friends
-        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
-        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/", date="2017-10-6 06:00:00+0800")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/", date="2017-10-6 06:00:00+0800")
         new_user_friend1.save()
         new_user_friend2.save()
         new_user.friend.add(new_user_friend1, new_user_friend2)
@@ -37,8 +37,8 @@ class MainUnitTest(TestCase):
                                        email="argaghulamahmad@gmail.com")
 
         # Creating a new user friends
-        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
-        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/", date="2017-10-6 06:00:00+0800")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/", date="2017-10-6 06:00:00+0800")
         new_user_friend1.save()
         new_user_friend2.save()
         new_user.friend.add(new_user_friend1, new_user_friend2)
@@ -78,8 +78,8 @@ class MainUnitTest(TestCase):
                                        email="argaghulamahmad@gmail.com")
 
         # Creating a new user friends
-        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
-        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/", date="2017-10-6 06:00:00+0800")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/", date="2017-10-6 06:00:00+0800")
         new_user_friend1.save()
         new_user_friend2.save()
         new_user.friend.add(new_user_friend1, new_user_friend2)
@@ -104,8 +104,8 @@ class MainUnitTest(TestCase):
 
     def test_model_can_create_new_user_friend(self):
         # Creating a new user friends
-        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
-        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/", date="2017-10-6 06:00:00+0800" )
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/", date="2017-10-6 06:00:00+0800")
         new_user_friend1.save()
         new_user_friend2.save()
 
@@ -122,8 +122,8 @@ class MainUnitTest(TestCase):
                                        email="argaghulamahmad@gmail.com")
 
         # Creating a new user friends
-        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
-        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/", date="2017-10-6 06:00:00+0800")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/", date="2017-10-6 06:00:00+0800")
         new_user_friend1.save()
         new_user_friend2.save()
         new_user.friend.add(new_user_friend1, new_user_friend2)
@@ -147,8 +147,8 @@ class MainUnitTest(TestCase):
                                        email="argaghulamahmad@gmail.com")
 
         # Creating a new user friends
-        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
-        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/", date="2017-10-6 06:00:00+0800")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/", date="2017-10-6 06:00:00+0800")
         new_user_friend1.save()
         new_user_friend2.save()
         new_user.friend.add(new_user_friend1, new_user_friend2)
@@ -189,8 +189,8 @@ class MainUnitTest(TestCase):
                                        email="argaghulamahmad@gmail.com")
 
         # Creating a new user friends
-        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/")
-        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/")
+        new_user_friend1 = UserFriend(name="Arga Ghulam Ahmad", url="https://ppw-lab-arga.herokuapp.com/", date="2017-10-6 06:00:00+0800")
+        new_user_friend2 = UserFriend(name="Claudio Yosafat", url="https://ppw-lab-claudio.herokuapp.com/", date="2017-10-6 06:00:00+0800")
         new_user_friend1.save()
         new_user_friend2.save()
         new_user.friend.add(new_user_friend1, new_user_friend2)
@@ -208,14 +208,3 @@ class MainUnitTest(TestCase):
         new_post = UserPost.objects.create(user=new_user, post=post_text, date=test_date_time)
 
         self.assertEqual(new_post.__str__(), test_name + " " + test_date_time)
-
-
-    def test_str_function_user_friend(self):
-        test_name = "Arga Ghulam Ahmad"
-        test_url = "https://ppw-lab-arga.herokuapp.com/"
-
-        # Creating a new user friends
-        new_user_friend = UserFriend(name=test_name, url=test_url)
-        new_user_friend.save()
-
-        self.assertEqual(new_user_friend.__str__(), test_name + " " + test_url)

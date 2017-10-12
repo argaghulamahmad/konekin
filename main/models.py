@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime
 GENDER_CHOICES = (
         ('M', 'Male'),
         ('F', 'Female'),
@@ -42,6 +42,4 @@ class UserExpertise(models.Model):
 class UserFriend(models.Model):
     name = models.CharField(max_length=200)
     url = models.URLField()
-
-    def __str__(self):
-        return str(self.name + " " + self.url)
+    date= models.DateTimeField(auto_now_add = True)

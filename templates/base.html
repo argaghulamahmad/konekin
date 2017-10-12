@@ -9,11 +9,13 @@
         {% block title %} {{ title }}{% endblock %}
     </title>
     <meta name="Description" content="Konekin - Tugas 1 Kelompok 10 Kelas B Tahun 2017">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_friend.css' %}"/>
+    
 </head>
 <header>
         {% include "partials/header.html" %}
@@ -24,6 +26,7 @@
                 <!-- content goes here -->
             {% endblock %}
     </content>
+    
 </body>
 <footer>
     {% block footer %}
