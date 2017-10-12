@@ -1,5 +1,6 @@
 from django.test import TestCase
-
+from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
 # Create your tests here.
 from django.test import Client
 from django.urls import resolve
@@ -45,6 +46,28 @@ class UpdateStatusUnitTest(TestCase):
             self.assertNotIn(test, html_response)
 
 
+class UpdateStatusFunctionalTest(TestCase):
+    def setUp(self):
+        chrome_options = Options()
+        chrome_options.add_argument('--dns-prefetch-disable')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('disable-gpu')
+        self.selenium = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
+        super(UpdateStatusFunctionalTest, self).setUp()
 
+    def tearDown(self):
+        self.selenium.quit()
+        super(UpdateStatusFunctionalTest, self).tearDown()
+
+    def test_postarea_stastcardarea_dashboard(self):
+        selenium = self.selenium
+
+        # Opening the link we want to test
+        selenium.get('http://127.0.0.1:8000/stats/')
+
+        # find the form element
+        post_area = selenium.find_element_by_id('post-area')
+        stats_card_area = selenium.find_element_by_id('stats-card-area')
 
 
