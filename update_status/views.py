@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import *
 from main.models import *
 from main.views import id_user_main
 from .forms import Status_Form
