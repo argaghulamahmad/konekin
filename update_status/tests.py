@@ -1,3 +1,5 @@
+from unittest import skip
+
 from django.test import TestCase
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
@@ -10,9 +12,11 @@ from .forms import Status_Form
     # Create your tests here.
 class UpdateStatusUnitTest(TestCase):
 
+
         def test_update_status_url_is_exist(self):
             response = Client().get('/update-status/')
             self.assertEqual(response.status_code, 200)
+
 
         def test_update_status_using_index_func(self):
             found = resolve('/update-status/')
@@ -36,6 +40,7 @@ class UpdateStatusUnitTest(TestCase):
             html_response = response.content.decode('utf8')
             self.assertIn(test, html_response)
 
+        
         def test_post_error_and_render_the_result(self):
             test = 'MANTAB'
             response_post = Client().post('/update-status/update-status', { 'description': ''})
