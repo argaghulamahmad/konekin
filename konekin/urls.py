@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.views.generic import RedirectView
 import dashboard.urls as dashboard
 import add_friend.urls as add_friend
+import halaman_profile.urls as halaman_profile
 
 urlpatterns = [
     url(r'^$', RedirectView.as_view(permanent=True, url='/update-status/'), name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^stats/', include(dashboard, namespace='dashboard')),
     url(r'^add-friend/',include(add_friend, namespace ='add-friend')),
+    url(r'^halaman-profil/',include(halaman_profile, namespace='halaman_profile'))
 ]

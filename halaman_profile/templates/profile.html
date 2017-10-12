@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
+    <body>
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+
+    <div class="title">
+        <h1> PROFILE PAGE </h1>
+    </div>
+    <div class="circle1"></div>
+
+    <div class="profile_picture">
+        <img id="img-profile" src="{% static profile_pic %}" alt="profile-img" class="center">
+    </div>
+
+    <div class="container">
+
+        <div id="name">
+            {{ name }}
+        </div>
+
+        <div id="bio">
+            <table align="center">
+                <tr>
+                    <td id="subject">Birthday</td>
+                    <td id="value">{{ birthday }}</td>
+                </tr>
+                <tr>
+                    <td id="subject">Gender</td>
+                    <td id="value">{{ gender }}</td>
+                </tr>
+                <tr>
+                    <td id="subject">Expertise</td>
+                    <td id="value">{% for obj in expertise %}
+                        <div class = "expertise">{{ obj }}</div>
+                    {% endfor %}</td>
+                </tr>
+                <tr>
+                    <td id="subject">Description</td>
+                    <td id="value">{{ description }}</td>
+                </tr>
+                <tr>
+                    <td id="subject">Email</td>
+                    <td id="value">{{ email }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </body>
+
+{% endblock %}

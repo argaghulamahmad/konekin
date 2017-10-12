@@ -12,29 +12,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/add_friend.css' %}"/>
-    
+
+    <link href=' http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href=' http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 </head>
 <header>
-        {% include "partials/header.html" %}
-    </header>
-<body oncontextmenu="return false;">
-    <content>
-            {% block content %}
-                <!-- content goes here -->
-            {% endblock %}
-    </content>
-    
+    {% include "partials/header.html" %}
+</header>
+<body oncontextmenu="return true;"> <!--edit-->
+<content>
+    {% block content %}
+        <!-- content goes here -->
+    {% endblock %}
+</content>
+
 </body>
 <footer>
     {% block footer %}
-    {% include "partials/footer.html" %}
+        {% include "partials/footer.html" %}
     {% endblock %}
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="application/javascript"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="application/javascript">
     {# jika ingin nambahin script js disini letakkan kodenya #}
 </script>
