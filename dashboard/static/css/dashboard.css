@@ -1,3 +1,7 @@
+body {
+    min-width: 0;
+}
+
 #page-title-div {
     margin: 5px 19% 5px;
 }
@@ -23,7 +27,6 @@
 
 .row {
     width: auto;
-    border: 1px solid blue;
 }
 
 #stats-card-area {
@@ -31,7 +34,6 @@
     text-align: center;
     font-family: 'Lato', Arial, sans-serif;
     position: relative;
-    overflow: hidden;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -46,7 +48,6 @@
     font-family: 'Roboto', Arial, sans-serif;
     position: relative;
     float: left;
-    overflow: hidden;
     margin: 10px;
     min-width: 100px;
     max-width: 430px;
@@ -74,7 +75,7 @@
 }
 
 .stats-card i {
-  font-size: 15px;
+    font-size: 15px;
     color: #fff;
     width: 40px;
     line-height: 40px;
@@ -167,17 +168,21 @@
     }
 }
 
-
 .post-container {
-  background: #fff;
-  border-radius: 5px;
-  font-family: "adelle-sans", sans-serif;
-  font-weight: 100;
-  margin: 48px auto;
-  width: 100rem;
+    background: #fff;
+    border-radius: 5px;
+    font-family: "adelle-sans", sans-serif;
+    font-weight: 100;
+    margin: 48px;
+    width: 100rem;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 250px) {
     .post-container {
         width: 27rem;
     }
@@ -191,6 +196,10 @@
     .post-container {
         width: 100rem;
     }
+}
+
+.post-header {
+    padding-top: 30px;
 }
 
 .post-container a {
@@ -276,4 +285,59 @@
 .published-date {
   border-radius: 3px;
   padding: 0 .5rem;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#switch-theme-area {
+    padding-top: 4%;
 }
