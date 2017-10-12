@@ -44,10 +44,10 @@ class DashboardUnitTest(TestCase):
         self.assertIn(str(self.user.friend.count()), html_response)
         self.assertIn(str(UserPost.objects.count()), html_response)
 
-    #def test_stats_show_latest_post(self):
-    #    response = Client().get('/stats/')
-    #    html_response = response.content.decode('utf8')
-    #    self.assertIn(str(UserPost.objects.first().post), html_response)
+    def test_stats_show_latest_post(self):
+        response = Client().get('/stats/')
+        html_response = response.content.decode('utf8')
+        self.assertIn(str(UserPost.objects.first().post), html_response)
 
 class DashboardFunctionalTest(TestCase):
     def setUp(self):
