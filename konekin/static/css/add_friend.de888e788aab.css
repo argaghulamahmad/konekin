@@ -7,6 +7,9 @@ body{
     margin-bottom: 19px;
   }
 
+  #add-friend-title{
+    color : black;
+  }
   #form_friend{
     width: 100%;
   }
@@ -48,14 +51,9 @@ body{
  }
 
  td{
-   font-size: 125%;
-   font-family : "OpenSans";
+   font-family : "OpenSans"
  }
  
  h2{
-   font-weight : bold;
-   font-family : "Montserrat";
+   font-family : "Montserrat"
  }
-
-
-
