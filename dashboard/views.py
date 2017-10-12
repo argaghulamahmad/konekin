@@ -3,22 +3,13 @@ from main.models import *
 from main.views import id_user_main
 from django.shortcuts import get_object_or_404
 
-def count_user_post():
-    total_post = 0
-
-    for post in post_set:
-        if (post.user_id==id_user_main):
-            total_post += 1
-
-    return total_post
-
 response = {}
 post_set = UserPost.objects.filter(user_id=id_user_main)
 user = get_object_or_404(User, id=id_user_main)
 original_photo_path = UserProfile.objects.get(user_id=id_user_main).photo.url
 username = user.name
-number_of_friends = user.friend.count()
-number_of_feeds = count_user_post()
+number_of_friends = UserFriend.objects.count()
+number_of_feeds = UserPost.objects.count()
 photo_path = original_photo_path[7:]
 reversed_post = list(reversed(post_set))
 

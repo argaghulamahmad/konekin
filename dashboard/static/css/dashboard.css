@@ -145,7 +145,7 @@
 }
 
 #latest-post-title {
-    margin-left: 25%;
+  text-align: center; 
 }
 
 @media screen and (max-width: 900px) {
