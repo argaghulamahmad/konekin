@@ -67,10 +67,6 @@ body {
     margin-top: -265px;
 }
 
-.container{
-    font-family: "Open Sans";
-}
-
 #name {
     margin-top: 40px;
     font-family: "Open Sans Extrabold";
@@ -85,6 +81,11 @@ body {
 
 table {
     margin-top: 20px;
+}
+
+table, tr, td{
+    font-family: "Open Sans";
+    font-size: 12px;
 }
 
 table, tr, td#subject {

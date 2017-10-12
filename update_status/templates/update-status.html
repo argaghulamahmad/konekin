@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<style>
+@media only screen and (max-width: 768px) {
+  #input-list form {
+      width: 290px;
+  }
+  .to-do-list .to-do-list-delete {
+    bottom: -50px;
+  }
+  .flex-item .flex-container{
+    padding: 0 15px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+  }
+    }
+.flex-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  background: #85BFF2;
+  position: relative;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-right: -15px;
+  margin-left: -15px;
+
+}
+#input-list form{
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+</style>
+
+
+<h1 class="main-title">Update Status</h1>
+<hr/>
+<section name="input-list" id="input-list">
+    <center>
+    <div class="flex-container" >
+        <form id="form" method="POST" action="{% url 'update-status:add-status' %}">
+            <h2>What's New?</h2>
+            {% csrf_token %}
+            {{ upstatus_form }}
+            <br>
+            <br>
+            <input id="submit" type="submit" class="btn btn-lg btn-block btn-info" value="Submit" maxlength="280" minlength="180">
+            <br>
+        </form>
+
+    </div>
+    </center>
+</section>
+<div class="container">
+<section name="my-list" id="my-list">
+    <div class="container" >
+        <h2 class="my-list-title">My Status</h2>
+        <div class="flex">
+            {% if user_post %}
+            {% for data in user_post reversed %}
+                <div class="post-container">
+                  <div>
+                      <div class="post-header">
+                    <div class="post-author--no-cover">
+                        <img id="img-profile-post-area" src="{% static photo_path %}" alt="profile-img">
+                        <h3>{{ username }}</h3>
+                    </div>
+                  </div>
+
+                  <div class="post-body">
+                    <div class="post-summary">
+                      <p>{{ data.post }}</p>
+                    </div>
+                  </div>
+
+                  <div class="post-footer">
+                    <ul>
+                      <li class="published-date">{{ data.date }}</li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+            {% endfor %}
+             {% else %}
+            <div class="alert alert-danger text-center">
+                <strong>No Status!</strong>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+</div>
+
+{% endblock %}        

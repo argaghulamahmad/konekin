@@ -27,6 +27,3 @@ def add_new_friend(request):
         return HttpResponseRedirect('/add-friend/')
     else:
         return HttpResponseRedirect('/add-friend/')
-
-
-

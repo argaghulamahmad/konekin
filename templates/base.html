@@ -36,9 +36,21 @@
         {% include "partials/footer.html" %}
     {% endblock %}
 </footer>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="application/javascript"
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="application/javascript">
     {# jika ingin nambahin script js disini letakkan kodenya #}
+    $('#switch-button').click(function() {
+      if ($(this).is(':checked')) {
+        $('body').css({
+            'background-color': 'white'
+        });
+      } else {
+        $('body').css({
+            'background-color': '#DEF2F1'
+        });
+      }
+    });
 </script>

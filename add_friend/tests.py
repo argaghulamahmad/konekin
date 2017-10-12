@@ -5,6 +5,9 @@ from .views import index, add_new_friend
 # from .models import Friend_List
 from .forms import Add_Friend_Form
 from  main.models import *
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 
 # Create your tests here.
 class AddFriendUnitTest(TestCase):
@@ -60,7 +63,7 @@ class AddFriendUnitTest(TestCase):
 
 
     def test_add_new_friend_fail(self):
-        response = Client().post('/add-friend/add_new_friend/',{'name' : 'Dummy', 'url' : 'www.dummy.com'})
+        response = Client().post('/add-friend/add_new_friend/',{'name' : 'Dummy', 'url' : 'dummy'})
         self.assertEqual(response.status_code, 302)
 
     def test_add_friend_form_validation_for_blank_items(self):
@@ -70,3 +73,26 @@ class AddFriendUnitTest(TestCase):
         self.assertEqual(form.errors['url'],["This field is required."])
 
     
+class AddFriendFunctionalTest(TestCase):
+    def setUp(self):
+        chrome_options = Options()
+        chrome_options.add_argument('--dns-prefetch-disable')
+        chrome_options.add_argument('--no-sandbox')        
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('disable-gpu')
+        self.selenium  = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
+        super(AddFriendFunctionalTest, self).setUp()
+
+    def tearDown(self):
+        self.selenium.quit()
+        super(AddFriendFunctionalTest, self).tearDown()
+
+    def test_add_new_friend(self):
+        selenium = self.selenium
+        selenium.get('http://127.0.0.1:8000/add-friend/')
+        name = selenium.find_element_by_id('id_name')
+        url = selenium.find_element_by_id('id_url')
+        add_friend = selenium.find_element_by_id('btn')
+        name.send_keys('Dummy')
+        url.send_keys('http://dummy.herokuapp.com')
+        add_friend.send_keys(Keys.RETURN)
