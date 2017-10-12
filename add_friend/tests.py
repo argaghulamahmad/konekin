@@ -60,7 +60,7 @@ class AddFriendUnitTest(TestCase):
 
 
     def test_add_new_friend_fail(self):
-        response = Client().post('/add-friend/add_new_friend/',{'name' : 'Dummy', 'url' : 'www.dummy.com'})
+        response = Client().post('/add-friend/add_new_friend/',{'name' : 'Dummy', 'url' : 'dummy'})
         self.assertEqual(response.status_code, 302)
 
     def test_add_friend_form_validation_for_blank_items(self):
@@ -70,3 +70,4 @@ class AddFriendUnitTest(TestCase):
         self.assertEqual(form.errors['url'],["This field is required."])
 
     
+# class AddFriendFunctionalTest(TestCase):
