@@ -44,6 +44,12 @@ class DashboardUnitTest(TestCase):
         self.assertIn(str(self.user.friend.count()), html_response)
         self.assertIn(str(UserPost.objects.count()), html_response)
 
+    def test_stats_display_username_and_photo(self):
+        response = Client().get('/stats/')
+        html_response = response.content.decode('utf8')
+        self.assertIn(str(self.user.name), html_response)
+        self.assertIn(str(UserProfile.objects.first().photo.url[:7]), html_response)
+
     def test_stats_show_latest_post(self):
         response = Client().get('/stats/')
         html_response = response.content.decode('utf8')
