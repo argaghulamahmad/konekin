@@ -78,3 +78,4 @@ class DashboardFunctionalTest(TestCase):
         # find the form element
         post_area = selenium.find_element_by_id('post-area')
         stats_card_area = selenium.find_element_by_id('stats-card-area')
+        navbar = selenium.find_element_by_tag_name('nav')
