@@ -1,4 +1,4 @@
-h1{
+h1 {
     font-family: "Montserrat Black";
     color: #ffffff;
 }
@@ -7,44 +7,42 @@ h1{
     background-color: white;
 }
 
-.circle1{
-    height: 280px;
-    width: 280px;
-    border-radius : 50%;
-    background-color : #2b7a78;
-    z-index : -100;
+.circle1 {
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    background-color: #2b7a78;
+    z-index: -100;
 
     margin-left: auto;
     margin-right: auto;
-    margin-top: -145px;
+    margin-top: -125px;
     margin-bottom: -130px;
-
 
     box-shadow: -13px -7px 20px rgba(0, 0, 0, 0.4);
 
 }
 
 img.center {
-    margin-top : -30px;
-    height: 250px;
-    width: 250px;
+    margin-top: -10px;
+    height: 200px;
+    width: 200px;
 
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
 
-    z-index:99;
-
+    z-index: 99;
 
 }
 
 .circle2 {
     height: 80px;
     width: 80px;
-    border-radius : 50%;
-    background-color : #FFFFFF;
-    z-index : 1000;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    z-index: 1000;
     margin-left: auto;
     margin-right: auto;
 }
@@ -56,15 +54,15 @@ body {
 }
 
 .title {
-    padding: 20px 100px;
+    padding: 20px;
     text-align: center;
-    height: 250px;
+    height: 230px;
     background-color: #3aafa9;
     margin-top: -20px;
 }
 
 .profile_picture {
-    margin-top: -265px;
+    margin-top: -215px;
 }
 
 #name {
@@ -75,7 +73,7 @@ body {
 }
 
 #bio {
-    padding: 0px 100px;
+    padding: 0px 0px;
 
 }
 
@@ -83,13 +81,20 @@ table {
     margin-top: 20px;
 }
 
-table, tr, td{
+td, th {
+    padding: 10px;
+}
+
+table, tr, td {
     font-family: "Open Sans";
-    font-size: 12px;
+    font-size: 13px;
 }
 
 table, tr, td#subject {
     padding: 5px;
+
+    font-family: "Open Sans Semibold";
+
 }
 
 table, tr, td#value {
@@ -97,17 +102,27 @@ table, tr, td#value {
     padding-right: 5px;
 }
 
-.expertise{
-    border: solid;
-    border-radius : 20px;
+@media (max-width: 768px){
+    table, tr, td#value {
+        padding-left: 30px;
+    }
+}
 
-    border-color: #2b7a78;
+.expertise {
+    border-radius: 20px;
+
+    background: linear-gradient(to right, #2b7a78, #3aafa9);
+
     float: left;
 
     margin-right: 10px;
     margin-bottom: 10px;
-    padding: 7px;
+
+    padding: 7px 12px;
+
+    color: #ffffff;
 }
+
 
 .gradient-background {
     height: 100vh;
@@ -117,4 +132,10 @@ table, tr, td#value {
     background: -moz-linear-gradient(#3aafa9, #def2f1); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#3aafa9, #def2f1); /* Standard syntax (must be last) */
 
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 1070px;
+    }
 }
