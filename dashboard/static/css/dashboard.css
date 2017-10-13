@@ -343,10 +343,10 @@ input:checked + .slider:before {
 }
 
 .post-container:hover {
-    -webkit-box-shadow: 0 12px 25px 10px #39FF14;
-    -moz-box-shadow: 0 12px 25px 10px #39FF14;
-    -o-box-shadow: 0 12px 25px 10px #39FF14;
-    box-shadow: 0 12px 25px 10px #39FF14;
+    -webkit-box-shadow: 0 12px 25px 10px #2b7a78;
+    -moz-box-shadow: 0 12px 25px 10px #2b7a78;
+    -o-box-shadow: 0 12px 25px 10px #2b7a78;
+    box-shadow: 0 12px 25px 10px #2b7a78;
     -webkit-transform: translate(0, -5px);
     -moz-transform: translate(0, -5px);
     -o-transform: translate(0, -5px);
