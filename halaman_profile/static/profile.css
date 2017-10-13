@@ -80,8 +80,14 @@ body {
 
 #bio {
     padding: 0px 0px;
-    font-size: 13px;
+    font-size: 10px;
 
+}
+
+@media (min-width: 400px) {
+    #bio {
+        font-size: 13px;
+    }
 }
 
 table {
