@@ -108,7 +108,8 @@ footer {
 }
 
 .navbar-header{
-    font-family:"Montserrat Black";
+    font-family:"Montserrat";
+    font-weight: bolder;
 }
 
 .sticky {
