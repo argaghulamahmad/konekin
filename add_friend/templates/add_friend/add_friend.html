@@ -4,6 +4,7 @@
 <div class="container">
     <div id="add-friend-title">
         <h2>Add Friend</h2>
+        <hr style="height:2px;border-width:0;background-color:gray">
     </div>
     <form id="form_friend" method="POST" action="{% url 'add-friend:add_new_friend' %}">
         {% csrf_token %} {{ add_friend }}
@@ -17,6 +18,7 @@
     <div class="container">
         <div id="list-friend-title">
             <h2>Friend List</h2>
+            <hr style="height:2px;border-width:0;background-color:gray">
         </div>
         <div class="flex">
             {% if friend_list %}
