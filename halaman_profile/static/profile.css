@@ -19,6 +19,9 @@ h1 {
     margin-top: -125px;
     margin-bottom: -130px;
 
+    -webkit-box-shadow: -13px -7px 20px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: -13px -7px 20px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: -13px -7px 20px rgba(0, 0, 0, 0.4);
     box-shadow: -13px -7px 20px rgba(0, 0, 0, 0.4);
 
 }
