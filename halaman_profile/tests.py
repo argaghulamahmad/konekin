@@ -18,3 +18,4 @@ class ProfileUnitTest(TestCase):
     def test_profile_using_index_func(self):
         found = resolve('/halaman-profil/')
         self.assertEqual(found.func, index)
+

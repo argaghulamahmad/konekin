@@ -18,6 +18,7 @@ def index(request):
     response['expertise'] = user.expertise.all()
     response['description'] = user.description
     response['email'] = user.email
+    response['title'] = "Konekin - Profile"
 
     html = "profile.html"
 
