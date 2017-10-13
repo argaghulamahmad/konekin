@@ -1,37 +1,51 @@
-{% extends "base.html" %}
-{% load staticfiles %}
-{% load static %}
-{% block content %}
+{% extends "base.html" %} {% load staticfiles %} {% load static %} {% block content %}
 
-<div class= "container">
+<section name="add-new-friend" id="add-new-friend"></section>
+<div class="container">
     <div id="add-friend-title">
         <h2>Add Friend</h2>
+        <hr style="height:2px;border-width:0;background-color:gray">
     </div>
-    <section name ="form_friend">
-        <form id ="form_friend" method = "POST" action ="{% url 'add-friend:add_new_friend' %}">
-            {% csrf_token %}
-            {{ add_friend }}
-            <br>
-            <button id="btn" type="submit" class="btn btn-default">Add Friend</button>
-        </form>
-    </section>
-    <br>
-    <div id="list-friend-title">
-        <h2>List Friend</h2>
-    </div>
-    <div id="table-friend">
-        <table class="table">
-            <tbody>
-                {% for i in friend_list %}
-                <tr>
-                    <td align = "left"> {{ i.name }}</td>
-                    <td align = "left"> <a href= "{{i.url}}">{{ i.url }} </a></td>
-                    <td align = "right"> <i>Added {{ i.date }}</i></td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+    <form id="form_friend" method="POST" action="{% url 'add-friend:add_new_friend' %}">
+        {% csrf_token %} {{ add_friend }}
+        <br>
+        <button id="btn" type="submit" class="btn btn-default">Add Friend</button>
+    </form>
 </div>
+</section>
+<br>
+<section name="my-friend-list" id="my-friend-list">
+    <div class="container">
+        <div id="list-friend-title">
+            <h2>Friend List</h2>
+            <hr style="height:2px;border-width:0;background-color:gray">
+        </div>
+        <div class="flex">
+            {% if friend_list %}
+            {% for i in friend_list %}
+            <div class="flex-item">
+                <div class="friend-list">
+                    <div class="friend-pic">
+                        <img class="img-circle" src="../../static/img/K.png">
+                    </div>
+                    <div class="friend-name">
+                        {{i.name}}
+                    </div>
+                    <div class="friend-url">
+                        <a href="{{i.url}}">{{ i.url }} </a>
+                    </div>
+                    <div class="friend-added">
+                        <i>Added {{ i.date }}</i>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="alert alert-danger text-center">
+                <strong>Anda belum memiliki teman</strong> silahkan menambahkan teman baru.
+            </div>
+            {% endif %}
+        </div>
+</section>
 
 {% endblock %}

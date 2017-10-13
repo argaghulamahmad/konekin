@@ -1,0 +1,78 @@
+.item2 {
+    background-color: white;
+}
+
+img.center::before{
+    
+
+}
+
+img.center {
+    margin-top: 30px;
+    height: 250px;
+    width: 250px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+
+    box-shadow: -13px -7px 20px rgba(0, 0, 0, 0.4);
+}
+
+img.center::before{
+
+}
+
+body {
+    background-color: #def2f1;
+    min-height: 0px;
+
+}
+
+.title {
+    padding: 20px 100px;
+    text-align: center;
+    height: 250px;
+    background-color: #3aafa9;
+    margin-top: -20px;
+}
+
+.profile_picture {
+    margin-top: -160px;
+}
+
+#name {
+    margin-top: 40px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+
+#bio {
+    padding: 0px 100px;
+
+}
+
+table {
+    margin-top: 20px;
+}
+
+table, tr, td#subject {
+    padding: 5px;
+}
+
+table, tr, td#value {
+    padding-left: 50px;
+    padding-right: 5px;
+}
+
+.gradient-background {
+    height: 100vh;
+    background: #def2f1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#3aafa9, #def2f1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#3aafa9, #def2f1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#3aafa9, #def2f1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#3aafa9, #def2f1); /* Standard syntax (must be last) */
+
+}
