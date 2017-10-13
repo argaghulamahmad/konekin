@@ -1,5 +1,6 @@
 h1 {
-    font-family: "Montserrat Black";
+    font-family : "Montserrat";
+    font-weight: 900;
     color: #ffffff;
 }
 
@@ -70,8 +71,11 @@ body {
 
 #name {
     margin-top: 40px;
-    font-family: "Open Sans Extrabold";
+
+    font-family: "Open Sans";
     font-size: 25px;
+    font-weight: bolder;
+
     text-align: center;
 }
 
@@ -96,13 +100,16 @@ table, tr, td {
 table, tr, td#subject {
     padding: 5px;
 
-    font-family: "Open Sans Semibold";
-
+    font-weight: bold;
+    color: #2b7a78;
 }
 
 table, tr, td#value {
     padding-left: 50px;
     padding-right: 5px;
+
+    font-weight: normal;
+    color: #000000;
 }
 
 @media (max-width: 768px){
