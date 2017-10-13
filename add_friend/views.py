@@ -8,6 +8,7 @@ from main.views import id_user_main
 # Create your views here.
 current_user = User.objects.get(id = id_user_main)
 response = {}
+
 def index(request):
     response['add_friend'] = Add_Friend_Form
     friends = UserFriend.objects.all()
