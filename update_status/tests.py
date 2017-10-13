@@ -17,6 +17,11 @@ class UpdateStatusUnitTest(TestCase):
             response = Client().get('/update-status/')
             self.assertEqual(response.status_code, 200)
 
+        def test_root_url_now_is_using_update_status(self):
+            response = Client().get('/')
+            self.assertEqual(response.status_code, 301)
+            self.assertRedirects(response, '/update-status/', 301, 200)
+
 
         def test_update_status_using_index_func(self):
             found = resolve('/update-status/')
@@ -40,7 +45,7 @@ class UpdateStatusUnitTest(TestCase):
             html_response = response.content.decode('utf8')
             self.assertIn(test, html_response)
 
-        
+
         def test_post_error_and_render_the_result(self):
             test = 'MANTAB'
             response_post = Client().post('/update-status/update-status', { 'description': ''})
