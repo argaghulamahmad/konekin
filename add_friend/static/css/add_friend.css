@@ -112,10 +112,10 @@ flex-flow: row wrap;
 }
 
 .friend-list:hover {
--webkit-box-shadow: 0 12px 25px 10px rgba(0, 0, 0, 0.4);
--moz-box-shadow: 0 12px 25px 10px rgba(0, 0, 0, 0.4);
--o-box-shadow: 0 12px 25px 10px rgba(0, 0, 0, 0.4);
-box-shadow: 0 12px 25px 10px rgba(0, 0, 0, 0.4);
+-webkit-box-shadow: 0 12px 25px 10px #2b7a78;
+-moz-box-shadow: 0 12px 25px 10px #2b7a78;
+-o-box-shadow: 0 12px 25px 10px #2b7a78;
+box-shadow: 0 12px 25px 10px #2b7a78;
 -webkit-transform: translate(0, -5px);
 -moz-transform: translate(0, -5px);
 -o-transform: translate(0, -5px);
