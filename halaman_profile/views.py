@@ -14,7 +14,7 @@ def index(request):
     response['profile_pic'] = photo_path
     response['name'] = user.name
     response['birthday'] = user.birthday
-    response['gender'] = user.gender
+    response['gender'] = user.get_gender_display()
     response['expertise'] = user.expertise.all()
     response['description'] = user.description
     response['email'] = user.email
